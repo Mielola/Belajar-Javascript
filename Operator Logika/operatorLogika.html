@@ -134,16 +134,8 @@
             <td>true</td>
         </tr>
     </table>
+    <button onclick="incrementNilai()">Tambah Nilai</button>
+    <div id="result"></div>
 </body>
-<script>
-    const nilaiUjian = 70
-    const nilaiAbsensi = 70
-
-    const lulusUjian = nilaiUjian >= 70
-    const lulusAbsensi = nilaiAbsensi >= 70
-    
-    const statusKelulusan =  lulusUjian && lulusAbsensi
-    document.writeln("<h2> " + statusKelulusan)
-    
-</script>
+<script src="script.js"></script>
 </html>
