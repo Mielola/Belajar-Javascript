@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+<body>
+    <h1>Operator &&</h1>
+    <table>
+        <tr>
+            <th>Nilai 1</th>
+            <th>Nilai Operator</th>
+            <th>Nilai 2</th>
+            <th>Hasil</th>
+        </tr>
+
+        <!-- Kolom 1 -->
+        <tr>
+            <td>true</td>
+            <td>&& / AND</td>
+            <td>true</td>
+            <td>true</td>
+        </tr>
+
+        <!-- Kolom 2 -->
+        <tr>
+            <td>true</td>
+            <td>&& / AND</td>
+            <td>false</td>
+            <td>false</td>
+        </tr>
+
+        <!-- Kolom 3 -->
+        <tr>
+            <td>false</td>
+            <td>&& / AND</td>
+            <td>true</td>
+            <td>false</td>
+        </tr>
+
+        <!-- Kolom 5 -->
+        <tr>
+            <td>false</td>
+            <td>&& / AND</td>
+            <td>false</td>
+            <td>ture</td>
+        </tr>
+
+
+    </table>
+    <h3>Contoh :</h3>
+
+    <h1>Operator ||</h1>
+    <table>
+        <tr>
+            <th>Nilai 1</th>
+            <th>Nilai Operator</th>
+            <th>Nilai 2</th>
+            <th>Hasil</th>
+        </tr>
+
+        <!-- Kolom 1 -->
+        <tr>
+            <td>true</td>
+            <td>|| / OR</td>
+            <td>true</td>
+            <td>true</td>
+        </tr>
+
+        <!-- Kolom 2 -->
+        <tr>
+            <td>true</td>
+            <td>|| / OR</td>
+            <td>false</td>
+            <td>true</td>
+        </tr>
+
+        <!-- Kolom 3 -->
+        <tr>
+            <td>false</td>
+            <td>|| / OR</td>
+            <td>true</td>
+            <td>true</td>
+        </tr>
+
+        <!-- Kolom 5 -->
+        <tr>
+            <td>false</td>
+            <td>|| / OR</td>
+            <td>false</td>
+            <td>false</td>
+        </tr>
+
+
+    </table>
+
+    <h1>Operator Unary</h1>
+    <table>
+        <tr>
+            <th>Nilai Operator</th>
+            <th>Nilai 2</th>
+            <th>Hasil</th>
+        </tr>
+
+        <!-- Kolom 1 -->
+        <tr>
+            <td>!</td>
+            <td>true</td>
+            <td>false</td>
+        </tr>
+
+        <!-- Kolom 2 -->
+        <tr>
+            <td>!</td>
+            <td>false</td>
+            <td>true</td>
+        </tr>
+    </table>
+</body>
+<script>
+    const nilaiUjian = 70
+    const nilaiAbsensi = 70
+
+    const lulusUjian = nilaiUjian >= 70
+    const lulusAbsensi = nilaiAbsensi >= 70
+    
+    const statusKelulusan =  lulusUjian && lulusAbsensi
+    document.writeln("<h2> " + statusKelulusan)
+    
+</script>
+</html>
