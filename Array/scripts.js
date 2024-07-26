@@ -27,13 +27,24 @@ function displayMahasiswa() {
 }
 
 const deleteMahasiswaWithIndex = (index) => {
-    delete Mahasiswa[index]
+    if (index >= 0 && index < Mahasiswa.length){
+        Mahasiswa.splice(index, 1)
+    } else {
+        console.log("Index tidak valid")
+    }
 }
 
 function deleteMahasiswaWithName(nama){
     let index = Mahasiswa.findIndex(mahasiswa => mahasiswa.nama == nama)
     if (index !== -1){
         Mahasiswa.splice(index, 1)
+    }
+}
+
+const editMahasiswa = (nama , newName) =>{
+    let index = Mahasiswa.findIndex(mahasiswa => mahasiswa.nama === nama)
+    if (index !== -1){
+        Mahasiswa[index].nama = newName;
     }
 }
 
@@ -54,4 +65,9 @@ displayMahasiswa()
 deleteMahasiswaWithName("Muhammad Wildab")
 console.log("Sesudah Dihapus Menggunakan Nama")
 displayMahasiswa()
+
+// Edit
+editMahasiswa("Ranggaina", "Mass Fiaz");
+console.log("Sesudah Diedit");
+displayMahasiswa();
 
