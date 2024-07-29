@@ -49,3 +49,5 @@ console.table(newArr3)
     return e * 19
  })
  console.table(newArrMap)
+
+ //====================================
